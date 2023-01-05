@@ -1,11 +1,5 @@
 <template>
-    <div>
-
-    </div>
+  <div></div>
 </template>
-<script>
-
-</script>
-<style>
-
-</style>
+<script></script>
+<style></style>
