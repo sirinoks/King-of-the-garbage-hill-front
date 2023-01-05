@@ -1,23 +1,25 @@
 <template>
-  <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
   <div class="panels">
-    <div class="col left-panel">
-      <Leaderboard />
+    <div class="col left-panel"></div>
+    <div class="col center-panel">
+      <MainLeaderboard />
+      <MainActions />
     </div>
-    <div class="col center-panel"></div>
     <div class="col right-panel"></div>
   </div>
 </template>
 
-<script>
-import Leaderboard from './components/Leaderboard.vue'
+<script lang="ts">
+import MainLeaderboard from "./components/Main-Leaderboard.vue";
+import MainActions from "./components/Main-Actions.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Leaderboard
-  }
-}
+    MainLeaderboard,
+    MainActions,
+  },
+};
 </script>
 
 <style>
@@ -33,14 +35,6 @@ body {
   flex-direction: row;
 }
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 .col {
   display: flex;
   width: 30%;
@@ -50,11 +44,12 @@ body {
 .left-panel {
   background-color: #f3aaaa;
   flex-direction: column;
-
 }
 
 .center-panel {
   background-color: #8ed66d;
+  display: flex;
+  flex-direction: column;
 }
 
 .right-panel {
