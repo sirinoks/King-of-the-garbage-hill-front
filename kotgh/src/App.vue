@@ -69,8 +69,14 @@ body {
   background-color: #5d94c7;
 }
 
+.left-stats-container {
+  margin-top:20vh;
+}
+
 .center-leaderboard-container {
   margin-top: 10vh;
   margin-bottom: 18vh;
 }
+
+
 </style>
