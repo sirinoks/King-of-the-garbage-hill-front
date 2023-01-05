@@ -65,7 +65,7 @@ export default defineComponent({
       chars: [
         {
           name: "Bratishka",
-          img: "/src/assets/bratishka.png",
+          img: "/src/assets/heroes/bratishka.png",
         },
         {
           name: "Tolya",
