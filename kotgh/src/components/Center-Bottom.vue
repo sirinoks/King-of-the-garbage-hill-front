@@ -1,6 +1,5 @@
 <template>
-    <div>Center bottom</div>
-  </template>
-  <script></script>
-  <style></style>
-  
+  <div>Center bottom</div>
+</template>
+<script></script>
+<style></style>

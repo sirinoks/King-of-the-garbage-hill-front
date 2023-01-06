@@ -1,6 +1,5 @@
 <template>
-    <div>Top login</div>
-  </template>
-  <script></script>
-  <style></style>
-  
+  <div>Top login</div>
+</template>
+<script></script>
+<style></style>
