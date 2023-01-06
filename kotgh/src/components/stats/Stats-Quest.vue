@@ -2,14 +2,22 @@
   <div>
     Quest stats
     <dl>
-      <dt>Justice</dt>
-      <dd>1</dd>
-      <dt>Morale</dt>
-      <dd>3</dd>
-      <dt>Skill</dt>
-      <dd>1</dd>
-      <dt>Class</dt>
-      <dd>4</dd>
+      <div class="stat">
+        <dt>Justice</dt>
+        <dd>1</dd>
+      </div>
+      <div class="stat">
+        <dt>Morale</dt>
+        <dd>3</dd>
+      </div>
+      <div class="stat">
+        <dt>Skill</dt>
+        <dd>1</dd>
+      </div>
+      <div class="stat">
+        <dt>Class</dt>
+        <dd>4</dd>
+      </div>
     </dl>
   </div>
 </template>

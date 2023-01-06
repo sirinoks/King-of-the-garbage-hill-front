@@ -2,14 +2,22 @@
   <div>
     Primary stats
     <dl>
-      <dt>Intelligence</dt>
-      <dd>1</dd>
-      <dt>Strength</dt>
-      <dd>3</dd>
-      <dt>Speed</dt>
-      <dd>1</dd>
-      <dt>Psyche</dt>
-      <dd>4</dd>
+      <div class="stat">
+        <dt>Intelligence</dt>
+        <dd>1</dd>
+      </div>
+      <div class="stat">
+        <dt>Strength</dt>
+        <dd>3</dd>
+      </div>
+      <div class="stat">
+        <dt>Speed</dt>
+        <dd>1</dd>
+      </div>
+      <div class="stat">
+        <dt>Psyche</dt>
+        <dd>4</dd>
+      </div>
     </dl>
   </div>
 </template>

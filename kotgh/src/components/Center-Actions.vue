@@ -1,17 +1,23 @@
 <template>
   <div class="container">
-    <!--Buttons here-->
-    <div class="gobutton">
-      <button class="go" role="button">Go</button>
-    </div>
-    <div class="extras">
-      <button class="undo">X</button>
-      <button class="auto">A</button>
+    <div class="buttons">
+      <!--Buttons here-->
+      <div class="gobutton">
+        <button class="go" role="button">Go</button>
+      </div>
+      <div class="extras">
+        <button class="undo">X</button>
+        <button class="auto">A</button>
+      </div>
     </div>
   </div>
 </template>
 <script></script>
 <style scoped>
+div {
+  display: flex;
+}
+
 button {
   cursor: pointer;
   border-width: 0;
@@ -20,41 +26,39 @@ button {
     rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
   background-color: #fcfcfd;
   box-sizing: border-box;
-  border-width: 0;
-  appearance: none;
   transition: box-shadow 0.15s, transform 0.15s;
   will-change: box-shadow, transform;
 }
 .container {
+  height: 6vh;
+  background-color: #fcfcfd3f;
+  justify-content: center;
+}
+.buttons {
   display: flex;
-  height: 5vh;
-  align-items: stretch;
-  align-content: stretch;
-  background-color: #fcfcfd;
+  width: 60%;
 }
 
 .gobutton {
-  flex-grow: 5;
+  flex-grow: 3;
 }
 .extras {
-  display: flex;
   flex-direction: column;
-  flex-grow: 2;
+  flex-grow: 1;
 }
 
 .extras button {
-  width: 10vw;
-  height: 20vh;
   align-items: center;
   z-index: 3;
   font-size: 1rem;
+  align-items: stretch;
+  height: 100%;
 }
 
 .go {
-  width: 20vw;
-  height: 5vh;
+  width: 100%;
+  height: 100%;
   align-items: center;
-  display: inline-flex;
   justify-content: center;
   touch-action: manipulation;
   font-size: 1.2rem;

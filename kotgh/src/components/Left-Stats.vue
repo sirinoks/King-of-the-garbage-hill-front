@@ -19,4 +19,18 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+dl {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+}
+dd {
+  margin: 0;
+  flex-grow: 3;
+}
+.stat {
+  flex-direction: row;
+  display: flex;
+}
+</style>

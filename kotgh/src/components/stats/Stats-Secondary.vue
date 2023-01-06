@@ -2,14 +2,22 @@
   <div>
     Secondary stats
     <dl>
-      <dt>Analysis</dt>
-      <dd>1</dd>
-      <dt>Toughness</dt>
-      <dd>3</dd>
-      <dt>Dexterity</dt>
-      <dd>1</dd>
-      <dt>Stability</dt>
-      <dd>4</dd>
+      <div class="stat">
+        <dt>Analysis</dt>
+        <dd>1</dd>
+      </div>
+      <div class="stat">
+        <dt>Toughness</dt>
+        <dd>3</dd>
+      </div>
+      <div class="stat">
+        <dt>Dexterity</dt>
+        <dd>1</dd>
+      </div>
+      <div class="stat">
+        <dt>Stability</dt>
+        <dd>4</dd>
+      </div>
     </dl>
   </div>
 </template>
