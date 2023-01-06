@@ -70,13 +70,11 @@ body {
 }
 
 .left-stats-container {
-  margin-top:20vh;
+  margin-top: 20vh;
 }
 
 .center-leaderboard-container {
   margin-top: 10vh;
   margin-bottom: 18vh;
 }
-
-
 </style>

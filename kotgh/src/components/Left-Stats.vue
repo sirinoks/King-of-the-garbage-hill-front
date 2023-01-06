@@ -18,6 +18,5 @@ export default {
     StatsQuest,
   },
 };
-
 </script>
 <style></style>
