@@ -22,7 +22,9 @@
         <CenterBottom />
       </div>
     </div>
-    <div class="col right-panel"></div>
+    <div class="col right-panel">
+      <RightPassives />
+    </div>
   </div>
 </template>
 
@@ -33,6 +35,7 @@ import LeftStats from "./components/Left-Stats.vue";
 import LeftHero from "./components/Left-Hero.vue";
 import CenterTop from "./components/Center-Top.vue";
 import CenterBottom from "./components/Center-Bottom.vue";
+import RightPassives from "./components/Right-Passives.vue";
 
 export default {
   name: "App",
@@ -43,6 +46,7 @@ export default {
     LeftHero,
     CenterTop,
     CenterBottom,
+    RightPassives,
   },
 };
 </script>
