@@ -1,20 +1,28 @@
 <template>
 
 
-<div class="logins">
-  <!-- <Login version="1.0"></Login> -->
-  <LoginSuccess version="1.0" username="Sirinoks"></LoginSuccess>
-</div>
+<!-- <div class="logins">
+  <Login v-if="!isLoggedIn" version="1.0"></Login>
+  <LoginSuccess v-else version="1.0" :username="username"></LoginSuccess>
+</div> -->
 
+<div>
+  <PatchNotes></PatchNotes>
+</div>
   <!-- <RouterView /> -->
 </template>
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import Login from './components/Login.vue'
-import LoginSuccess from './components/LoginSuccess.vue'
+import Login from '@/views/Login/Login.vue'
+import LoginSuccess from '@/views/Login/LoginSuccess.vue'
+import PatchNotes from '@/components/Home/PatchNotes.vue'
+import { ref } from 'vue';
 
 import { PhHorse, PhHeart, PhCube } from "@phosphor-icons/vue";
+
+const isLoggedIn = ref(true);
+const username = ref('Sirinoks');
 
 
 </script>
