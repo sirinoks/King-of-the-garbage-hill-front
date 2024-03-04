@@ -16,10 +16,10 @@
         </div>
         <div>
             <div class="redirectMessage">
-                You will be automatically redirected in 0 seconds...
+                You will be automatically redirected in {{ countdown }} seconds...
             </div>
             <div class="actionBox">
-                <button class="okButton">
+                <button class="okButton" @click="redirect">
                     Ok
                 </button>
             </div>
@@ -29,11 +29,36 @@
     </div>
     </template>
     <script setup lang="ts">
+    import {ref} from 'vue';
+    import { useRouter } from 'vue-router';
+    import { onMounted } from 'vue';
+
     defineProps({
       version: String,
       username: String,
     })
+
+    const countdown = ref(3);
+    const router = useRouter();
+
+    const redirect=()=>{
+        router.push('/home');
+    }
     
+    const startCountdown = () => {
+        const interval = setInterval(() => {
+            countdown.value--;
+
+            if (countdown.value === 0) {
+            clearInterval(interval);
+            redirect();
+            }
+        }, 1000);
+    };
+
+    onMounted(()=>{
+        startCountdown();
+    })
     
     </script>
     
@@ -69,7 +94,7 @@
     .user>.userName{
         font-size:1.25rem;
         color:var(--kh-c-text-primary-500);
-        background-color: var(--kh-c-neutrals-sat-600);
+        background-color: var(--kh-c-neutrals-sat-650);
         justify-content: center;
         padding:0.8rem;
     }
@@ -96,6 +121,37 @@
         color:var(--kh-c-text-primary-500);
         border:none;
         font-size: 1.125rem;
+        z-index:5;
+        transition: background-color 0.15s ease-out, color 0.15s ease-out;
+        cursor:pointer;
+    }
+    .okButton:hover{
+        background-color: var(--kh-c-text-primary-600);
+        color:var(--kh-c-secondary-success-300);
+        border: 1px solid var(--kh-c-secondary-success-500);
+        z-index:5;
+    }
+
+    .okButton:hover:before,.okButton:hover:after{
+        content:'';
+        width: 0.2rem;
+        height: 3rem;
+        position:relative;
+        background-color: var(--kh-c-text-primary-600);
+        z-index:4;
+    }
+    .okButton:hover:before{
+        right:5rem;
+    }
+
+    .okButton:hover:after{
+        left:5rem;
+    }
+
+    .okButton:active{
+        background-color: transparent;
+        color:var(--kh-c-secondary-success-300);
+        border: 1px solid var(--kh-c-secondary-success-500);
     }
     
     .info{

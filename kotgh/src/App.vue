@@ -1,15 +1,15 @@
 <template>
 
 
-<!-- <div class="logins">
-  <Login v-if="!isLoggedIn" version="1.0"></Login>
+<div class="logins">
+  <Login v-if="!isLoggedIn" @loginClick="setLogin" version="1.0"></Login>
   <LoginSuccess v-else version="1.0" :username="username"></LoginSuccess>
-</div> -->
+</div>
 
 <div>
-  <PatchNotes></PatchNotes>
+  <!-- <PatchNotes></PatchNotes> -->
 </div>
-  <!-- <RouterView /> -->
+  <RouterView />
 </template>
 
 <script setup lang="ts">
@@ -21,9 +21,12 @@ import { ref } from 'vue';
 
 import { PhHorse, PhHeart, PhCube } from "@phosphor-icons/vue";
 
-const isLoggedIn = ref(true);
+const isLoggedIn = ref(false);
 const username = ref('Sirinoks');
 
+const setLogin=()=>{
+  isLoggedIn.value=true;
+}
 
 </script>
 

@@ -5,15 +5,23 @@
         kotgh-{{version}}
     </div>
     <div class="info">King of the garbage hill uses your Discord account information to register and log in</div>
-    <div>Login with discord</div>
+    <button @click="emitLogin">Login with discord</button>
 </div>
 </div>
 </template>
+
 <script setup lang="ts">
+import {defineEmits} from 'vue';
+
 defineProps({
   version: String
 })
 
+const emits = defineEmits(['loginClick']);
+
+const emitLogin=()=>{
+    emits('loginClick');
+}
 
 </script>
 

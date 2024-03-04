@@ -48,7 +48,7 @@ const patchNotes = [
 }
 .patchNotes{
     align-self:flex-start;
-    background-color: var(--kh-c-neutrals-sat-630);
+    background-color: var(--kh-c-neutrals-sat-700);
     flex-direction:column;
     padding: 0.5rem;
     gap: 0.25rem;
@@ -79,7 +79,7 @@ const patchNotes = [
     flex-direction:column;
     padding: 1.5rem;
     gap: 0.625rem;
-    border: 1px solid var(--kh-c-neutrals-sat-450);
+    border: 1px solid var(--kh-c-neutrals-sat-500);
     background-color: var(--kh-c-neutrals-sat-600);
 }
 .patchNoteBox>div:first-child{

@@ -8,5 +8,10 @@
 
     "lib": [],
     "types": ["node", "jsdom"]
-  }
+  },
+  "include":[
+    "src/**/*.vue",
+    "src/**/**/*.vue",
+    
+  ]
 }
