@@ -12,6 +12,6 @@
     }
   ],
   "compilerOptions": {
-    "moduleResolution": "node",
+    "moduleResolution": "node"
   }
 }

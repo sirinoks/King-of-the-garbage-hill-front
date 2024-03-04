@@ -1,11 +1,9 @@
 @import './base.css';
 
 #app {
-  display:flex;
+  display: flex;
   height: 100vh;
 }
 
-
 @media (min-width: 1024px) {
-  
 }
