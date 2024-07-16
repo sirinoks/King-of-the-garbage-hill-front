@@ -5,6 +5,8 @@
       <div class="info">
         King of the garbage hill uses your Discord account information to register and log in
       </div>
+
+      <a :href="identifyLink">login actually</a>
       <button @click="emitLogin">Login with discord</button>
     </div>
   </div>
@@ -22,6 +24,8 @@ const emits = defineEmits(['loginClick'])
 const emitLogin = () => {
   emits('loginClick')
 }
+
+const identifyLink = import.meta.env.VITE_IDENTIFY_URL
 </script>
 
 <style scoped>
