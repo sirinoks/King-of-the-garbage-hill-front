@@ -35,12 +35,22 @@ import HomeProfile from '@/components/Home/HomeProfile.vue'
   padding: 0 0.25rem;
 }
 .homePage>nav>a{
-  background-color: var(--kh-c-neutrals-sat-600);
-  padding: 0.625rem 0.875rem;
+  background-color: var(--kh-c-neutrals-pale-500);
+  padding: 0.625rem 1rem;
   color: var(--kh-c-text-primary-600);
   text-decoration: none;
   font-size:1.125rem;
-  border: 1px solid var(--kh-c-neutrals-sat-500);
+  border: 1px solid var(--kh-c-neutrals-pale-260);
+}
+
+.homePage>nav>a:hover{
+  background-color: var(--kh-c-neutrals-pale-350);
+  border: 1px solid var(--kh-c-neutrals-pale-240);
+}
+
+.homePage>nav>a:active{
+  background-color: var(--kh-c-neutrals-pale-575);
+  border: 1px solid var(--kh-c-neutrals-pale-375);
 }
 
 .homePage>.homeContent{

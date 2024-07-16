@@ -1,11 +1,14 @@
 <template>
   <div class="homeProfile">
-    <div>
+    <div class="userInfo">
         <div class="userName">
-            Sirinoks
+            {{username}}
         </div>
         <div class="currency">
-            124 currency
+            <div>
+            {{ currency }}
+            </div>
+            <div>coinicon</div>
         </div>
     </div>
     <div class="matches">
@@ -30,6 +33,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
+const username = ref('Sirinoks')
+const currency = ref(124)
 
 </script>
 
@@ -38,6 +45,25 @@
 .homeProfile{
     background-color: var(--kh-c-neutrals-sat-600);
     flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
 }
+
+.homeProfile h4{
+    font-size: 1rem;
+    color: var(--kh-c-text-primary-700);
+}
+.userInfo{
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: var(--kh-c-text-primary-700);
+    gap: 0.75rem;
+}
+.currency{
+    gap: 0.25rem;
+    color: var(--kh-c-text-highlight-primary);
+}
+
+
 
 </style>

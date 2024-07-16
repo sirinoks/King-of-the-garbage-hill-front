@@ -27,7 +27,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100svh;
     padding-bottom: 20vh;
   }
   .logins > div {
