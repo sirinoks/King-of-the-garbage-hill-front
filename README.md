@@ -1,6 +1,9 @@
-# kotgh
+# King Of The Garbage Hill
 
-This template should help get you started developing with Vue 3 in Vite.
+A turn based mafia-like game in your browser
+You can find an older discord version of the game [here](https://github.com/akulihin/King-of-the-Garbage-Hill)
+
+Developed with Vue 3 and Vite.
 
 ## Recommended IDE Setup
 
