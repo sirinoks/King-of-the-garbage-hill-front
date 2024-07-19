@@ -14,16 +14,21 @@
 
 <script setup lang="ts">
 import { defineEmits } from 'vue'
+import { onBeforeRouteUpdate } from 'vue-router'
 
 defineProps({
   version: String
 })
 
 const emits = defineEmits(['loginClick'])
-
 const emitLogin = () => {
   emits('loginClick')
 }
+
+onBeforeRouteUpdate(async (to, from) => {
+  // react to route changes...
+  console.log(await to.params);
+})
 
 const identifyLink = import.meta.env.VITE_IDENTIFY_URL
 </script>

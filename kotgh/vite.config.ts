@@ -12,5 +12,21 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  appType: 'mpa'
+  appType: 'custom',
+  ssr:{
+    target: 'node',
+  },
+  build: {
+    ssr: 'src/entry-server.ts',
+    outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: 'src/main.ts'
+      }
+    }
+  },
+  server: {
+    middlewareMode: true,
+    
+  }
 })

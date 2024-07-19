@@ -12,6 +12,19 @@
     }
   ],
   "compilerOptions": {
-    "moduleResolution": "node"
-  }
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "esModuleInterop": true,  // If using CommonJS modules
+    "target": "es2020",  // Target ECMAScript version
+    "module": "commonjs",  // Module system for output
+    "strict": true,  // Enable strict type-checking options
+    "skipLibCheck": true,  // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true  // Enforce consistent casing in file names
+  },
+  "include": [
+    "server/**/*.ts"  // Include all TypeScript files under the server directory
+  ],
+  "exclude": [
+    "node_modules"  // Exclude node_modules directory from compilation
+  ]
 }
