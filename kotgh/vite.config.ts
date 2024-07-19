@@ -22,6 +22,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'src/main.ts'
+      },
+      output: {
+        entryFileNames: 'entry-server.js'
       }
     }
   },
