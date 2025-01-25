@@ -17,8 +17,8 @@ export default defineConfig({
     target: 'node',
   },
   build: {
-    ssr: '../server/src/server.ts',
-    outDir: 'dist',
+    ssr: 'src/entry-server.ts',
+    outDir: 'dist/server',
     rollupOptions: {
       input: {
         main: 'src/main.ts'
@@ -27,9 +27,5 @@ export default defineConfig({
         entryFileNames: 'entry-server.js'
       }
     }
-  },
-  server: {
-    middlewareMode: true,
-    port: 53134
   }
 })

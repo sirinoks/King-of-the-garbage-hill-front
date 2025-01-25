@@ -10,9 +10,12 @@
       "moduleResolution": "node",
       "rootDir": "./src",
       "outDir": "./dist",
+      "allowSyntheticDefaultImports": true
     },
     "include": [
-      "src/**/*",
-      "src/**/*.d.ts"
+      "./src/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
     ]
 }

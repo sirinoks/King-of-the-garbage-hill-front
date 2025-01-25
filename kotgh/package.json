@@ -23,7 +23,6 @@
   "dependencies": {
     "@phosphor-icons/vue": "^2.1.6",
     "express": "^4.19.2",
-    "fs": "^0.0.1-security",
     "path": "^0.12.7",
     "pinia": "^2.1.7",
     "vue": "^3.4.15",
