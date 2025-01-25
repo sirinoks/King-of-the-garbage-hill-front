@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "target": "ESNext",
+      "target": "ES2022",
       "module": "ESNext",
       "resolveJsonModule": true,
       "strict": true,
@@ -8,11 +8,11 @@
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true,
       "moduleResolution": "node",
-      "outDir": "./dist"
+      "rootDir": "./src",
+      "outDir": "./dist",
     },
     "include": [
       "src/**/*",
       "src/**/*.d.ts"
     ]
 }
-  
