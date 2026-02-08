@@ -16,7 +16,9 @@
             <h4>Matches</h4>
         </div>
         <div class="matchList">
-
+            <MatchBox></MatchBox>
+            <MatchBox></MatchBox>
+            <MatchBox></MatchBox>
         </div>
     </div>
     <div class="chances">
@@ -26,7 +28,9 @@
             </h4>
         </div>
         <div class="chanceList">
-
+            <ChanceBox></ChanceBox>
+            <ChanceBox></ChanceBox>
+            <ChanceBox></ChanceBox>
         </div>
     </div>
   </div>
@@ -34,6 +38,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import MatchBox from '@/components/Home/MatchBox.vue'
+import ChanceBox from '@/components/Home/ChanceBox.vue'
 
 const username = ref('Sirinoks')
 const currency = ref(124)
@@ -64,6 +70,18 @@ const currency = ref(124)
     color: var(--kh-c-text-highlight-primary);
 }
 
+.homeProfile>div{
+    flex-direction: column;
+}
+
+
+.matches{
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.matchList, .chanceList{
+    flex-direction: column;
+}
 
 
 </style>

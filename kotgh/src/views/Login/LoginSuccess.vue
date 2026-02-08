@@ -44,7 +44,7 @@ const startCountdown = () => {
       clearInterval(interval)
       redirect()
     }
-  }, 1000)
+  }, 3000)
 }
 
 onMounted(() => {

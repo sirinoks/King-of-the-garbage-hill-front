@@ -14,7 +14,7 @@
   const ok = params.get('ok') === '1';
   const user = params.get('user');
   const isLoggedIn = ref(false)
-  const username = ref('Sirinoks')
+  const username = ref('me :)')
 
   if (ok) {
     localStorage.setItem('isLoggedIn', 'true');

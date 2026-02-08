@@ -19,11 +19,6 @@ defineProps({
   version: String
 })
 
-// const emits = defineEmits(['loginClick'])
-// const emitLogin = () => {
-//   emits('loginClick')
-// }
-
 const apiBase = import.meta.env.VITE_API_BASE ?? '';
 const identifyLink = `${apiBase}/auth/discord`;
 
