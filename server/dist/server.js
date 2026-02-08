@@ -1,18 +1,17 @@
 import express from 'express';
+import path from 'path';
 import { PORT } from './config.js';
 import ssrRoutes from './routes/ssr.js';
 import apiRoutes from './routes/api.js';
-// import authRoutes from './routes/auth';
 const server = express();
 server.use(express.json());
-// Attach routes
-server.use(ssrRoutes);
+// Serve static assets from the frontend's client build directory
+server.use(express.static(path.resolve('O:/git/King-of-the-garbage-hill-front/kotgh/dist/client')));
+server.use('/assets', express.static(path.resolve('O:/git/King-of-the-garbage-hill-front/kotgh/dist/client')));
+// Attach API routes
 server.use(apiRoutes);
-// server.use(authRoutes);
-// server.get('/', (req, res)=>{
-//   console.log("info")
-//   res.status(200).json({ message: 'Hello from the server!' });
-// })
+// Catch-all route to handle SSR for non-static requests
+server.use('*', ssrRoutes);
 // Start server
 server.listen(PORT, () => {
     console.log(`App listening at http://localhost:${PORT}`);

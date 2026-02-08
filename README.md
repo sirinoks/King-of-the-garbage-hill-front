@@ -30,6 +30,26 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
+## Local Dev (MPA + OAuth)
+
+Backend:
+1. cd server
+2. npm install
+3. create server/.env (APPLICATION_ID, CLIENT_SECRET, REDIRECT_URI, PORT)
+4. npm run dev
+
+Frontend:
+1. cd kotgh
+2. npm install
+3. create kotgh/.env (VITE_API_BASE=http://localhost:53134)
+4. npm run dev
+
+Pages:
+- /login
+- /home
+- /game
+
+
 ### Compile and Hot-Reload for Development
 
 ```sh

@@ -13,8 +13,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits } from 'vue'
-import { onBeforeRouteUpdate } from 'vue-router'
 
 defineProps({
   version: String
@@ -25,12 +23,9 @@ const emitLogin = () => {
   emits('loginClick')
 }
 
-onBeforeRouteUpdate(async (to, from) => {
-  // react to route changes...
-  console.log(await to.params);
-})
+const apiBase = import.meta.env.VITE_API_BASE ?? '';
+const identifyLink = `${apiBase}/auth/discord`;
 
-const identifyLink = import.meta.env.VITE_IDENTIFY_URL
 </script>
 
 <style scoped>

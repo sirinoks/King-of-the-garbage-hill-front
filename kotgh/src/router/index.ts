@@ -4,11 +4,7 @@ import LoginPage from '@/views/Login/LoginPage.vue';
 import HelloWorld from '@/components/HelloWorld.vue';
 
 export function createRouter() {
-  // Determine if this is SSR or client-side
-  const isSSR = typeof window === 'undefined';
-  
-  // Use createMemoryHistory for SSR, createWebHistory for client-side
-  const history = isSSR ? createMemoryHistory() : createWebHistory();
+    const history = createWebHistory();
 
   return createVueRouter({
     history,
