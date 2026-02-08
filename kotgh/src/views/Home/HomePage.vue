@@ -13,6 +13,7 @@
       <PatchNotes></PatchNotes>
     </div>
     
+    <button @click="logout">Log out (test)</button>
 
   </div>
 </template>
@@ -20,6 +21,13 @@
 <script setup lang="ts">
 import PatchNotes from '@/components/Home/PatchNotes.vue'
 import HomeProfile from '@/components/Home/HomeProfile.vue'
+
+const logout = () => {
+  localStorage.removeItem('isLoggedIn');
+  localStorage.removeItem('username');
+  window.location.href = '/login';
+};
+
 
 </script>
 

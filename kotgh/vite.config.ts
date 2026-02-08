@@ -1,16 +1,53 @@
-import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import { resolve } from 'path';
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
+const rewrites: Record<string, string> = {
+  '/login': '/src/pages/login.html',
+  '/login/': '/src/pages/login.html',
+  '/home': '/src/pages/home.html',
+  '/home/': '/src/pages/home.html',
+  '/game': '/src/pages/game.html',
+  '/game/': '/src/pages/game.html',
+};
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx()],
+  plugins: [
+    {
+      name: 'mpa-rewrites',
+      configureServer(server) {
+        server.middlewares.use((req, _res, next) => {
+          if (!req.url) return next();
+          const path = req.url.split('?')[0];
+          if (rewrites[path]) req.url = rewrites[path];
+          next();
+        });
+      },
+      configurePreviewServer(server) {
+        server.middlewares.use((req, _res, next) => {
+          if (!req.url) return next();
+          const path = req.url.split('?')[0];
+          if (rewrites[path]) req.url = rewrites[path];
+          next();
+        });
+      },
+    },
+    vue(),
+    vueJsx(),
+  ],
   resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+    alias: { '@': resolve(__dirname, './src') },
   },
-  appType: 'mpa'
-})
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        login: resolve(__dirname, 'src/pages/login.html'),
+        home: resolve(__dirname, 'src/pages/home.html'),
+        game: resolve(__dirname, 'src/pages/game.html'),
+      },
+    },
+  },
+});

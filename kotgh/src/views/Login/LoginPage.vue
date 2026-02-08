@@ -9,9 +9,20 @@
   import LoginProcess from '@/views/Login/LoginProcess.vue'
   import LoginSuccess from '@/views/Login/LoginSuccess.vue'
   import { ref } from 'vue'
-    
+
+  const params = new URLSearchParams(window.location.search);
+  const ok = params.get('ok') === '1';
+  const user = params.get('user');
   const isLoggedIn = ref(false)
   const username = ref('Sirinoks')
+
+  if (ok) {
+    localStorage.setItem('isLoggedIn', 'true');
+    if (user) localStorage.setItem('username', user);
+    isLoggedIn.value = true;
+    if (user) username.value = user;
+    window.history.replaceState({}, '', '/login');
+  }
   
   const setLogin = () => {
     isLoggedIn.value = true
