@@ -1,13 +1,18 @@
 {
   "extends": "./tsconfig.app.json",
-  "exclude": [],
+  "include": [
+    "src/**/*.ts",       // Include TypeScript files under src/
+    "src/**/*.vue",      // Include Vue files under src/
+    "src/**/**/*.vue"    // Include nested Vue files under src/
+  ],
+  "exclude": [
+    "node_modules"       // Exclude node_modules directory
+  ],
   "compilerOptions": {
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.vitest.tsbuildinfo",
     "moduleResolution": "node",
-
     "lib": [],
     "types": ["node", "jsdom"]
-  },
-  "include": ["src/**/*.vue", "src/**/**/*.vue"]
+  }
 }

@@ -23,7 +23,6 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
 import { onMounted } from 'vue'
 
 defineProps({
@@ -32,10 +31,9 @@ defineProps({
 })
 
 const countdown = ref(3)
-const router = useRouter()
 
 const redirect = () => {
-  router.push('/home')
+  window.location.href = '/home';
 }
 
 const startCountdown = () => {

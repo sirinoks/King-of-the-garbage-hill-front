@@ -13,19 +13,19 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits } from 'vue'
 
 defineProps({
   version: String
 })
 
 const emits = defineEmits(['loginClick'])
-
 const emitLogin = () => {
   emits('loginClick')
 }
 
-const identifyLink = import.meta.env.VITE_IDENTIFY_URL
+const apiBase = import.meta.env.VITE_API_BASE ?? '';
+const identifyLink = `${apiBase}/auth/discord`;
+
 </script>
 
 <style scoped>
