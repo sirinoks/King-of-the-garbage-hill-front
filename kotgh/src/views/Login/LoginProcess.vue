@@ -6,8 +6,9 @@
         King of the garbage hill uses your Discord account information to register and log in
       </div>
 
-      <a :href="identifyLink">login actually</a>
-      <button @click="emitLogin">Login with discord</button>
+      <a class="loginLink" :href="identifyLink">
+        <button>Login with Discord</button>
+      </a>
     </div>
   </div>
 </template>
@@ -18,10 +19,10 @@ defineProps({
   version: String
 })
 
-const emits = defineEmits(['loginClick'])
-const emitLogin = () => {
-  emits('loginClick')
-}
+// const emits = defineEmits(['loginClick'])
+// const emitLogin = () => {
+//   emits('loginClick')
+// }
 
 const apiBase = import.meta.env.VITE_API_BASE ?? '';
 const identifyLink = `${apiBase}/auth/discord`;
@@ -52,6 +53,25 @@ const identifyLink = `${apiBase}/auth/discord`;
   justify-content: center;
 }
 
+.loginLink {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+}
+
+.loginLink button{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  font-size: 0.95rem;
+}
+
+
 /* Mobile Devices (e.g., smartphones) */
 @media only screen and (max-width: 800px) {
   .loginBox {
@@ -59,6 +79,13 @@ const identifyLink = `${apiBase}/auth/discord`;
     justify-content: center;
     padding: 2.375rem 1.75rem;
     gap: 1.5rem;
+  }
+  .loginBox a:last-of-type {
+    margin-top: 0.5rem;
+  }
+
+  .loginLink button{
+    font-size: 1rem;
   }
 }
 
