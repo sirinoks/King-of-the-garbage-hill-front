@@ -1,6 +1,11 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": [
+    "env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
@@ -10,6 +15,6 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "noEmit": false   // Ensure emitting JavaScript files is allowed
+    "noEmit": true   // Ensure emitting JavaScript files is allowed
   }
 }
