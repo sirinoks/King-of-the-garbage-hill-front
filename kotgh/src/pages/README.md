@@ -1,0 +1,1 @@
+The pages are MPA entry points. They hold anchor views which will load further components and will include smaller, SPA views that connect to them logically.
