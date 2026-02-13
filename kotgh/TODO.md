@@ -1,0 +1,1 @@
+- Move eslint 9 -> 10 when @typescript-eslint supports 10

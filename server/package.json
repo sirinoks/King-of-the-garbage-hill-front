@@ -6,28 +6,25 @@
   "main": "dist/server.js",
   "scripts": {
     "start": "npm run build && node dist/server.js",
-    "dev": "node --experimental-specifier-resolution=node --loader ts-node/esm ./src/server.ts",
-    "build": "tsc"
+    "dev": "node --experimental-specifier-resolution=node --import \"data:text/javascript,import { register } from 'node:module'; import { pathToFileURL } from 'node:url'; register('ts-node/esm', pathToFileURL('./'));\" ./src/server.ts",
+    "clean": "node --input-type=module -e \"import { rmSync } from 'node:fs'; rmSync('dist', { recursive: true, force: true }); rmSync('tsconfig.tsbuildinfo', { force: true });\"",
+    "build": "npm run clean && tsc"
   },
   "keywords": [],
   "author": "Sirinoks",
   "license": "MIT",
   "dependencies": {
-    "disco-oauth": "^5.1.1",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "helmet": "^7.1.0",
-    "node-fetch": "^3.3.2",
-    "nodemon": "^3.1.9",
-    "path": "^0.12.7",
-    "ts-node": "^10.9.2",
-    "url": "^0.11.3"
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1"
   },
   "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/helmet": "^4.0.0",
-    "@types/node": "^20.14.10",
-    "typescript": "^5.5.3",
-    "vite": "^6.0.11"
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.3",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
