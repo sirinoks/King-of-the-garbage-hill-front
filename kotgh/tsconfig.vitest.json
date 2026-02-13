@@ -11,7 +11,7 @@
   "compilerOptions": {
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.vitest.tsbuildinfo",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "lib": [],
     "types": ["node", "jsdom", "vite/client"]
   }
