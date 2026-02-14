@@ -1,5 +1,5 @@
 <template>
-  <div class="match">
+  <article class="match">
     <div>
 
       <div class="winner-box">
@@ -7,7 +7,7 @@
         <div class="match-hero-win"><img src="../../assets/heroes/le_crisp.png"></div>
       </div>
       <div class="others-box">
-        <div class="match-date">2024.01.23 10:40</div>
+        <time datetime="2024-01-23T10:40" class="match-date">2024.01.23 10:40</time>
         <div class="others-top-row">
           <div class="match-hero-lose"><img src="../../assets/heroes/tolya.png"></div>
           <div class="match-hero-lose"><img src="../../assets/heroes/tain.png"></div>
@@ -20,7 +20,7 @@
         <div>+</div>
         <div>100</div>
         <div>
-          <PhCoins :size="12" weight="fill" color="var(--kh-c-text-highlight-primary)" />
+          <PhCoins aria-hidden="true" :size="12" weight="fill" color="var(--kh-c-text-highlight-primary)" />
         </div>
       
         </div>
@@ -31,7 +31,7 @@
         <div class="match-hero-lose"><img src="../../assets/heroes/tigr.png"></div>
       </div>
     </div>    
-  </div>
+  </article>
 </template>
 
 <script setup lang="ts">

@@ -88,5 +88,4 @@ const currency = ref(124)
     gap: 0.5rem;
 }
 
-
 </style>
