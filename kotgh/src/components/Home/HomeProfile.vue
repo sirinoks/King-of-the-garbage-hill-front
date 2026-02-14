@@ -8,7 +8,9 @@
             <div>
             {{ currency }}
             </div>
-            <div>coinicon</div>
+            <div>
+                <PhCoins :size="20" weight="fill" color="var(--kh-c-text-highlight-primary)" />
+            </div>
         </div>
     </div>
     <div class="matches">
@@ -40,6 +42,7 @@
 import { ref } from 'vue'
 import MatchBox from '@/components/Home/MatchBox.vue'
 import ChanceBox from '@/components/Home/ChanceBox.vue'
+import { PhCoins } from '@phosphor-icons/vue'
 
 const username = ref('Sirinoks')
 const currency = ref(124)
@@ -68,6 +71,7 @@ const currency = ref(124)
 .currency{
     gap: 0.25rem;
     color: var(--kh-c-text-highlight-primary);
+    align-items: center;
 }
 
 .homeProfile>div{
@@ -81,6 +85,7 @@ const currency = ref(124)
 }
 .matchList, .chanceList{
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 
