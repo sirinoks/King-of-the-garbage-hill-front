@@ -88,4 +88,13 @@ const currency = ref(124)
     gap: 0.5rem;
 }
 
+.chances{
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.chances .chanceList {
+    gap: 0.5rem;
+}
+
 </style>
