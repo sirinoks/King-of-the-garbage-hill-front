@@ -2,7 +2,7 @@
   <div class="chanceBox">
     <div class="chancePercent" :style="{ width: chanceWidth }">
       <div class="heroBox">
-        <img src="../../assets/heroes/octopus.png" alt="octo hero">
+        <img :src="hero.avatar" :alt="hero.name">
       </div>
       <div class="chanceText">
         <p>{{ chance }}</p>
@@ -14,13 +14,16 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import type { HeroSummary } from '@/types/heroes';
+import { computed } from 'vue'
 const PORTRAIT_WIDTH = '3.125rem' //or 50px
+const props = defineProps<{
+  hero: HeroSummary;
+  chance: number
+}>()
 
-
-const chance = ref(16)
 const chanceWidth=computed(() => {
-  const c = Math.min(100, Math.max(0, chance.value));
+  const c = Math.min(100, Math.max(0, props.chance));
   return `calc(${PORTRAIT_WIDTH} + (100% - ${PORTRAIT_WIDTH}) * ${c / 100})`
 })
 
