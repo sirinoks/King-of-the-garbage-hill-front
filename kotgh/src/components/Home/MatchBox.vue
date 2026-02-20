@@ -55,8 +55,6 @@ const winner = computed(() => playersSorted.value[0])
 const topRow = computed(() => playersSorted.value.slice(1, 4))
 const bottomRow = computed(() => playersSorted.value.slice(4))
 const formattedDateEnd = computed(() => formatMatchDate(props.match.dateEnd))
-console.log(props)
-
 
 </script>
 
