@@ -37,6 +37,10 @@ const chanceWidth=computed(() => {
   border: 1px solid var(--kh-c-neutrals-sat-500);
   gap: 0.25rem;
   width: 100%;
+  cursor: pointer;
+}
+.chanceBox:hover{
+  background-color: var(--kh-c-neutrals-sat-650);
 }
 
 .chanceBox .chancePercent{
